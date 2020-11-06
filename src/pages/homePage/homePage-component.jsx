@@ -1,8 +1,8 @@
 import React from 'react';
 
-import SearchBar from '../../components/searchBar/searchBar-component'
+import SearchBar from '../../components/searchBar/searchBar-component';
 
-const HomePage = () => {
+const HomePage = (props) => {
 
    return (
       <div className="home-page-container">
@@ -10,6 +10,5 @@ const HomePage = () => {
       </div>
    );
 }
-
 
 export default HomePage;
