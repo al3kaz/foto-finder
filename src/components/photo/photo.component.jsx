@@ -16,8 +16,8 @@ const Photo = ({ urlSmall, urlBig, user, alt }) => {
 
          {isOpen &&
             (<dialog className='dialog-container' open onClick={handleClick}>
-               <h3 className='dialog-container-title'>{user}</h3>
                <img className='dialog-container-img' src={urlBig} alt={alt} />
+               <h3 className='dialog-container-title'>author: {user}</h3>
             </dialog>)}
       </div>
    );

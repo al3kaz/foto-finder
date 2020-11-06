@@ -1,0 +1,9 @@
+.home-page-container {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin:50px auto;
+   max-width: 1920px;
+   height: 80vh;
+   background-image: url('../../img//bg.jpg');
+}

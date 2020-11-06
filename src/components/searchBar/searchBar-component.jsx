@@ -35,11 +35,9 @@ const SearchBar = ({ setSpinner, setPhotos, history }) => {
    return (
       <div className="search-bar-container">
          <form className="form-container" onSubmit={handleSubmit}>
-            <label>
-               <h1>Image Search:</h1>
-            </label>
             <input
                className="input-style"
+               placeholder="find you photo"
                type="text"
                value={value}
                onChange={handleChange}
