@@ -15,6 +15,7 @@ const SearchBar = ({ setSpinner, setPhotos, history }) => {
 
    const unsplash = new Unsplash({ accessKey: "W_KPDO6kGppQIVNA8bvsJH3uwiwPe8Go0Bouij4qyqg" });
 
+
    const handleChange = (e) => {
       setValue(e.target.value)
    }

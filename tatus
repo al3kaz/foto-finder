@@ -1,0 +1,17 @@
+[33mcommit 668bd2c776828f715afd1a92229fcbb878376cb6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Aleksander Kazmierczak <aleksander.kazmierczak@gmail.com>
+Date:   Fri Nov 6 08:13:35 2020 +0100
+
+    withRouter HOC for history acces,  Redux persiste to store sesion , new Route to overview searching photos
+
+[33mcommit b2d7ce6918dd69440a782b06bf0df10359767476[m
+Author: Aleksander Kazmierczak <aleksander.kazmierczak@gmail.com>
+Date:   Thu Nov 5 00:41:20 2020 +0100
+
+    first commit
+
+[33mcommit fc3e630de42bd723a34b34cbe34bc7ccb5da00e8[m
+Author: Aleksander Kazmierczak <aleksander.kazmierczak@gmail.com>
+Date:   Wed Nov 4 20:34:16 2020 +0100
+
+    Initialize project using Create React App
