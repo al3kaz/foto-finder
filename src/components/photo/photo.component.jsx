@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 
 import './photo.styles.scss';
 
-const Photo = ({ urlSmall, urlBig, user, alt }) => {
+const Photo = ({ urlSmall, urlBig, user, alt, description }) => {
 
    const [isOpen, setIsOpen] = useState(false)
 
    const handleClick = () => {
       setIsOpen(!isOpen)
    }
-   console.log(isOpen)
+
    return (
       <div className='photo-container'>
          <img className='photo' src={urlSmall} alt={alt} onClick={handleClick} />
@@ -18,6 +18,7 @@ const Photo = ({ urlSmall, urlBig, user, alt }) => {
             (<dialog className='dialog-container' open onClick={handleClick}>
                <img className='dialog-container-img' src={urlBig} alt={alt} />
                <h3 className='dialog-container-title'>author: {user}</h3>
+               {description ? <p className='dialog-container-title'>{description}</p> : null}
             </dialog>)}
       </div>
    );

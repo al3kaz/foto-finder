@@ -12,7 +12,7 @@ function App() {
     <div className="App">
       <Switch>
         <Route exact path="/" component={HomePage}/>
-        <Route exact path="/:Id" component={SearchOverview}/>
+        <Route exact path="/:phrase" component={SearchOverview}/>
       </Switch>
     </div>
   );
