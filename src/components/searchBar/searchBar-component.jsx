@@ -25,7 +25,8 @@ const SearchBar = ({ history, setPage }) => {
       e.preventDefault();
       setInputValue("")
       setPage(1)
-      history.push(`/${inputValue}`);
+      if (inputValue === "") alert("put some value")
+      else { history.push(`/${inputValue}`); }
    }
 
    useEffect(() => {
@@ -41,6 +42,7 @@ const SearchBar = ({ history, setPage }) => {
                         <div className="suggest" key={suggest.id} onClick={() => {
                            history.push(`/${suggest.description}`);
                            setInputValue("")
+                           setPage(1)
                         }}> {suggest.description}</div>
                      ));
                   setSuggests(suggestions.length > 0 ? suggestions : <div>no seggestion</div>);

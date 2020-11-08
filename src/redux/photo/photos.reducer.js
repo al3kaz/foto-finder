@@ -1,10 +1,12 @@
+import {PhotoTypes} from './photo.types'
+
 const INITIAL_STATE = {
    currentPhotos: []
 }
 
 const photosReducer = (state = INITIAL_STATE, action) => {
    switch (action.type) {
-      case 'SET_PHOTOS':
+      case PhotoTypes.SET_PHOTOS:
          return {
             ...state,
             currentPhotos: action.payload

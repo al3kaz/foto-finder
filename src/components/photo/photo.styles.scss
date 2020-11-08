@@ -1,5 +1,20 @@
 .photo-container {
-display: flex;
+   transition: grid-row-start 300ms linear;
+   transition: transform 300ms ease;
+   transition: all 0.5s ease;
+   cursor: pointer;
+
+   .photo {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 0 16px #333;
+  transition: all 1.5s ease;
+  
+   }
+   .photo:hover {
+      transform: scale(1.025);
+      box-shadow: 0 0 32px #333;
+   }
 
    .dialog-container {
       display: flex;

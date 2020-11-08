@@ -1,10 +1,12 @@
+import {ActualPageTypes} from './actualPage.types'
+
 const INITIAL_STATE = {
    page: 1
 }
 
 const pageReducer = (state = INITIAL_STATE, action) => {
    switch (action.type) {
-      case 'SET_PAGE':
+      case ActualPageTypes.SET_PAGE:
          return {
             ...state,
             page: action.payload

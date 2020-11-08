@@ -1,4 +1,6 @@
+import {PhotoTypes} from './photo.types'
+
 export const setPhotos = photo => ({
-   type: 'SET_PHOTOS',
+   type: PhotoTypes.SET_PHOTOS,
    payload: photo
 });

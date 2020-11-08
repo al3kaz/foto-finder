@@ -1,4 +1,6 @@
+import {ActualPageTypes} from './actualPage.types'
+
 export const setPage = page => ({
-   type: 'SET_PAGE',
+   type: ActualPageTypes.SET_PAGE,
    payload: page
 });

@@ -1,12 +1,10 @@
 import React from 'react';
 
-import PhotosList from '../../components/photosList/photosList-component'
-
-import './SearchOverview-styles.scss'
+import PhotosListOverview from '../../components/photosListOverview/photosListOverview.component';
 
 const SearchOverview = () => {
    return (<div className="search-overview">
-      <PhotosList />
+      <PhotosListOverview />
    </div>);
 }
 

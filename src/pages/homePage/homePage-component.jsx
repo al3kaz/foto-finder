@@ -4,7 +4,7 @@ import SearchBar from '../../components/searchBar/searchBar-component';
 
 import './homePage-styles.scss';
 
-const HomePage = (props) => {
+const HomePage = () => {
 
    return (
       <div className="home-page-container">
