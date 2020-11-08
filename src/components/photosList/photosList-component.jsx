@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
+import WithSpinner from '../with-spinner/with-spinner.component'
+
 import { useParams, withRouter } from 'react-router-dom'
 
 import { setPhotos } from '../../redux/photo/photos.actions';
-import { setSpinner } from '../../redux/spinner/spinner.actions'
 
 import SearchBar from '../searchBar/searchBar-component';
 import Photo from '../photo/photo.component';
@@ -14,7 +15,7 @@ import './photosList-styles.scss';
 import Unsplash, { toJson } from 'unsplash-js';
 
 
-const PhotosList = ({ photos, setPhotos, setSpinner, history }) => {
+const PhotosList = ({ photos, setPhotos }) => {
 
    const unsplash = new Unsplash({
       accessKey: "W_KPDO6kGppQIVNA8bvsJH3uwiwPe8Go0Bouij4qyqg"
@@ -22,7 +23,7 @@ const PhotosList = ({ photos, setPhotos, setSpinner, history }) => {
 
    const { phrase } = useParams()
 
-   const [w8, setW8] = useState(false)
+   const [loading, setLoading] = useState(true)
    const [page, setPage] = useState(1)
    const [totalPage, setTotalPage] = useState(null)
 
@@ -32,8 +33,7 @@ const PhotosList = ({ photos, setPhotos, setSpinner, history }) => {
          .then(data => {
             setTotalPage(data.total_pages)
             setPhotos(data);
-            setSpinner(false);
-            setW8(true)
+            setLoading(false)
          });
    }, [phrase, page])
 
@@ -44,24 +44,27 @@ const PhotosList = ({ photos, setPhotos, setSpinner, history }) => {
    const handlePrevPage = () => {
       setPage(page - 1)
    }
-   console.log(history)
 
    return (
       <>
          <SearchBar />
-         {page === 1 ? null : <button onClick={handlePrevPage}>prev </button>}
-         <div>{page}</div>
-         {totalPage === page || totalPage === 0 ? null : <button onClick={handleNextPage}>next </button>}
+
+         <div div className="pagination-container">
+            <button disabled={page <= 1} className="page-button" onClick={handlePrevPage}>prev </button>
+            <div className="page-button">{page}</div>
+            <button disabled={totalPage === page} className="page-button" onClick={handleNextPage}>next </button>
+         </div>
+
          <div className="photos-list-container">
-            {w8 &&
-               photos.results.map(img => <Photo
-                  key={img.id}
-                  urlSmall={img.urls.small}
-                  urlBig={img.urls.regular}
-                  user={img.user.username}
-                  alt={img.alt_description}
-                  description={img.description}
-               />)
+            {loading ? null : photos.results.map(img => <Photo
+               key={img.id}
+               urlSmall={img.urls.small}
+               urlBig={img.urls.regular}
+               user={img.user.username}
+               location={img.user.location}
+               alt={img.alt_description}
+               description={img.description}
+            />)
             }
          </div>
       </>
@@ -75,7 +78,6 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
    setPhotos: photo => dispatch(setPhotos(photo)),
-   setSpinner: spinner => dispatch(setSpinner(spinner)),
 })
 
 

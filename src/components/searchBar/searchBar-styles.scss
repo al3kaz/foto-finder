@@ -5,7 +5,7 @@
 
    .form-container {
       display: flex;
-      width: 60%;
+      width: 80%;
       justify-content: center;
       align-items: center;
    
@@ -16,9 +16,21 @@
        display: inline-block;
        width: 30%;
        border-radius: 10px;
+      }
+   }
 
-    }
-   
+   .suggestions {
+      background-color: white;
+      padding: 10px;
+      border-radius: 10px;
+      border: 1px solid black;
+   }
+
+   .suggest {
+      margin: 5px;
+      padding-bottom: 5px;
+      border-bottom: 1px black solid;
+      cursor: pointer;
    }
 }
 

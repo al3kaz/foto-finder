@@ -17,21 +17,18 @@ display: flex;
 
 
       .dialog-container-img{
-         margin: auto;
+         margin: 0 auto;
          display: block;
          width: 80%;
          max-width: 700px;
+         padding-bottom: 20px;
       }
 
       .dialog-container-title{
-         margin: auto;
          display: block;
-         width: 80%;
-         max-width: 700px;
          text-align: center;
          color: #ccc;
          padding: 10px 0;
-         height: 150px;
       }
 
    }

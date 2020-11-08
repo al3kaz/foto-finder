@@ -11,3 +11,20 @@
     width: 80%;
     border: 2px solid black;
  }
+.pagination-container{
+   display: flex;
+   margin: 0 auto;
+   justify-content: center;
+   padding-bottom: 20px;
+}
+ .page-button {
+   cursor: pointer;
+   display: block;
+	padding: 10px;
+	float: left;
+	transition: 400ms ease;
+	color: grey;
+	font-size: 20px;
+	letter-spacing: 0.1em;
+   line-height: 50px;
+ }
