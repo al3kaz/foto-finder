@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
-import WithSpinner from '../with-spinner/with-spinner.component'
-
 import { useParams, withRouter } from 'react-router-dom'
 
 import { setPhotos } from '../../redux/photo/photos.actions';
+import { setPage } from '../../redux/actualPage/actualPage.actions';
 
 import SearchBar from '../searchBar/searchBar-component';
 import Photo from '../photo/photo.component';
@@ -15,7 +14,7 @@ import './photosList-styles.scss';
 import Unsplash, { toJson } from 'unsplash-js';
 
 
-const PhotosList = ({ photos, setPhotos }) => {
+const PhotosList = ({ photos, setPhotos, page, setPage }) => {
 
    const unsplash = new Unsplash({
       accessKey: "W_KPDO6kGppQIVNA8bvsJH3uwiwPe8Go0Bouij4qyqg"
@@ -24,7 +23,7 @@ const PhotosList = ({ photos, setPhotos }) => {
    const { phrase } = useParams()
 
    const [loading, setLoading] = useState(true)
-   const [page, setPage] = useState(1)
+   // const [page, setPage] = useState(1)
    const [totalPage, setTotalPage] = useState(null)
 
    useEffect(() => {
@@ -73,11 +72,13 @@ const PhotosList = ({ photos, setPhotos }) => {
 
 const mapStateToProps = state => ({
    photos: state.photo.currentPhotos,
+   page: state.page.page,
 })
 
 
 const mapDispatchToProps = dispatch => ({
    setPhotos: photo => dispatch(setPhotos(photo)),
+   setPage: page => dispatch(setPage(page)),
 })
 
 

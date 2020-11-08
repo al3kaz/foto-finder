@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
+
+import { setPage } from '../../redux/actualPage/actualPage.actions';
 
 import Unsplash, { toJson } from 'unsplash-js';
 
 import './searchBar-styles.scss';
 
-const SearchBar = ({ history }) => {
+const SearchBar = ({ history, setPage }) => {
 
    const unsplash = new Unsplash({
       accessKey: "W_KPDO6kGppQIVNA8bvsJH3uwiwPe8Go0Bouij4qyqg"
@@ -21,6 +24,7 @@ const SearchBar = ({ history }) => {
    const handleSubmit = (e) => {
       e.preventDefault();
       setInputValue("")
+      setPage(1)
       history.push(`/${inputValue}`);
    }
 
@@ -69,4 +73,9 @@ const SearchBar = ({ history }) => {
    );
 }
 
-export default withRouter(SearchBar);
+const mapDispatchToProps = dispatch => ({
+   setPage: page => dispatch(setPage(page)),
+})
+
+
+export default connect(null, mapDispatchToProps)(withRouter(SearchBar));
