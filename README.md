@@ -1,10 +1,9 @@
-# Getting Started with Create React App
+photo gallery in React using the unsplash API <br>
+redux for state management <br>
+hooks, react-router-dom, scss/styled component <br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
+### `npm install`
 
 ### `npm start`
 
