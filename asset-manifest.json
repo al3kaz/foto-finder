@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/foto-finder/static/css/main.4e10ec39.chunk.css",
-    "main.js": "/foto-finder/static/js/main.a2c936bc.chunk.js",
-    "main.js.map": "/foto-finder/static/js/main.a2c936bc.chunk.js.map",
+    "main.js": "/foto-finder/static/js/main.616ead81.chunk.js",
+    "main.js.map": "/foto-finder/static/js/main.616ead81.chunk.js.map",
     "runtime-main.js": "/foto-finder/static/js/runtime-main.f49aa061.js",
     "runtime-main.js.map": "/foto-finder/static/js/runtime-main.f49aa061.js.map",
     "static/js/2.0c2e2d44.chunk.js": "/foto-finder/static/js/2.0c2e2d44.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.f49aa061.js",
     "static/js/2.0c2e2d44.chunk.js",
     "static/css/main.4e10ec39.chunk.css",
-    "static/js/main.a2c936bc.chunk.js"
+    "static/js/main.616ead81.chunk.js"
   ]
 }
