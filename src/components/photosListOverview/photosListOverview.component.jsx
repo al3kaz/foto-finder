@@ -19,20 +19,20 @@ const PhotosList = ({ setPhotos, page, setPage }) => {
       accessKey: "W_KPDO6kGppQIVNA8bvsJH3uwiwPe8Go0Bouij4qyqg"
    });
 
-   const { phrase } = useParams()
+   const { phrase } = useParams();
 
-   const [loading, setLoading] = useState(true)
-   const [totalPage, setTotalPage] = useState(null)
+   const [loading, setLoading] = useState(true);
+   const [totalPage, setTotalPage] = useState(null);
 
-   const PhotoListWithSpinner = WithSpinner(photoList)
+   const PhotoListWithSpinner = WithSpinner(photoList);
 
    useEffect(() => {
       unsplash.search.photos(`${phrase}`, page, 30)
          .then(toJson)
          .then(data => {
-            setTotalPage(data.total_pages)
+            setTotalPage(data.total_pages);
             setPhotos(data);
-            setLoading(false)
+            setLoading(false);
          });
    }, [phrase, page])
 
