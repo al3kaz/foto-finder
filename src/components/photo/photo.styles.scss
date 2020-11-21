@@ -1,15 +1,16 @@
 .photo-container {
    width: 100%;
    display: inline-block;
+   margin: 20px auto;
    transition: grid-row-start 300ms linear;
    transition: transform 300ms ease;
    transition: all 0.5s ease;
    cursor: pointer;
-   margin: 20px 0;
 
    .photo {
   display:block;
-  width: 80%;
+  margin: 0 auto;
+  width: 90%;
   border-radius: 8px;
   box-shadow: 0 0 16px #333;
   transition: all 1.5s ease;

@@ -1,28 +1,27 @@
 .search-bar-container{
    display: flex;
+   margin-top: 20px ;
    flex-direction: column;
    align-items: center;
 
    .form-container {
       display: flex;
-      width: 80%;
+      width: 30vw;
       justify-content: center;
       align-items: center;
    
-      .input-style{
-      font-size: 1.2rem;
-      margin: 30px;
+      .input-style {
+       display: block;
+       width: 100%;
+       font-size: 1.2rem;
        padding: 10px;
-       display: inline-block;
-       width: 30%;
-       border-radius: 10px;
       }
    }
 
    .suggestions {
+      width: 30vw;
       background-color: white;
       padding: 10px;
-      border-radius: 10px;
       border: 1px solid black;
    }
 

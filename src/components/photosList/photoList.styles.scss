@@ -1,8 +1,9 @@
 .photos-list-container {
    margin: 0 50px;
-  column-count: 3;
+  column-count: 4;
 
   @media only screen and (max-width: 800px) {
     column-count: 2;
+    margin: 0 10px;
   }
  }
