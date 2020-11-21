@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/foto-finder/static/css/main.4e10ec39.chunk.css",
+    "main.css": "/foto-finder/static/css/main.f4386ed7.chunk.css",
     "main.js": "/foto-finder/static/js/main.616ead81.chunk.js",
     "main.js.map": "/foto-finder/static/js/main.616ead81.chunk.js.map",
     "runtime-main.js": "/foto-finder/static/js/runtime-main.f49aa061.js",
@@ -10,14 +10,14 @@
     "static/js/3.3c07464a.chunk.js": "/foto-finder/static/js/3.3c07464a.chunk.js",
     "static/js/3.3c07464a.chunk.js.map": "/foto-finder/static/js/3.3c07464a.chunk.js.map",
     "index.html": "/foto-finder/index.html",
-    "static/css/main.4e10ec39.chunk.css.map": "/foto-finder/static/css/main.4e10ec39.chunk.css.map",
+    "static/css/main.f4386ed7.chunk.css.map": "/foto-finder/static/css/main.f4386ed7.chunk.css.map",
     "static/js/2.0c2e2d44.chunk.js.LICENSE.txt": "/foto-finder/static/js/2.0c2e2d44.chunk.js.LICENSE.txt",
     "static/media/homePage-styles.scss": "/foto-finder/static/media/bg.8223acc5.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.f49aa061.js",
     "static/js/2.0c2e2d44.chunk.js",
-    "static/css/main.4e10ec39.chunk.css",
+    "static/css/main.f4386ed7.chunk.css",
     "static/js/main.616ead81.chunk.js"
   ]
 }
