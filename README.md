@@ -2,6 +2,8 @@ photo gallery in React using the unsplash API <br>
 redux for state management <br>
 hooks, react-router-dom, scss/styled component <br>
 
+[Live Demo](https://al3kaz.github.io/foto-finder/)
+
 
 ### `npm install`
 
